@@ -1,15 +1,27 @@
+```{r echo = FALSE}
+current_date <- format(
+  as.POSIXct(Sys.Date()),
+  '%B %d, %Y'
+)
+```
+
 ---
-title: Setting Up a New Project with Virtual Environments
-subtitle: Python and R Project with Virtual Environments
+title: Setting Up a New Project
+  with Virtual Environments
+subtitle: Python and R Project
+  with Virtual Environments
 # author:
   # name: Ramin Melikov
-  # affiliation: https://www.linkedin.com/in/melikov/
+  # affiliation:
+  #   'https://www.linkedin.com/in/melikov/'
   # email: ramin.melikov@gmail.com
-  # affiliation: Georgia Institute of Technology
+  # affiliation: Georgia Institute
+  #   of Technology
   # email: melikov@gatech.edu
-  # affiliation: University of Illinois at Urbana-Champaign
+  # affiliation: University of
+  #   Illinois at Urbana-Champaign
   # email: melikov2@illinois.edu
-# date: '`r format(as.POSIXct(Sys.Date()), "%B %d, %Y")`'
+# date: "`r current_date`"
 output:
   html_document:
     toc: false
@@ -19,34 +31,52 @@ editor_options:
   chunk_output_type: console
 ---
 
-Definitely will need **Anaconda**. I tried `pipenv` and
-`renv` and `vurtualenv` but I couldn't get them to work as
-well as **Anaconda** did. It seems to be the best for when
-you need to create virtual environments for each project.
-*(I also tried **Atom** and **VSCode**, and I happen to be
-a subscriber to **PyCharm**, and I think it is worth
-paying for **PyCharm**. It is actually totally worth
-paying for the bundle, especially if you like **DataGrip**.)*
+Definitely will need **Anaconda**.
+I tried `pipenv` and `renv` and
+`vurtualenv` but I couldn't get
+them to work as well as
+**Anaconda** did. It seems to be
+the best for when you need to
+create virtual environments for
+each project. *(I also tried
+**Atom** and **VSCode**, and I
+happen to be a subscriber to
+**PyCharm**, and I think it is
+worth paying for **PyCharm**. It
+is actually totally worth paying
+for the bundle, especially if
+you like **DataGrip**.)*
 
-All of the projects are located in the `D:\git` folder
-(for me). We'll refer to it as a home or projects folder.
+All of the projects are located
+in the `D:\git` folder (for me).
+We'll refer to it as a home or
+projects folder.
 
-Create a project folder in the home directory **and from
-that new directory**, execute the following command to
-create a `Python` environment. Make sure you are issuing
-these commands into the **Anaconda Prompt** that came with
-**Anaconda**.
+Create a project folder in the
+home directory **and from that
+new directory**, execute the
+following command to create a
+`Python` environment. Make sure
+you are issuing these commands
+into the **Anaconda Prompt**
+that came with **Anaconda**.
 
 ```
 # this command creates a python environment
 conda create --prefix pyvenv python=3.7
 ```
-Note: The `--prefix` makes it so that the `pyvenv`
-environment will be installed in the project directory
-instead of in the Conda's default location. If you have
-multiple drives, Conda will default to something like `C`
-drive. This helps with the control of where you want to
-install that virtual environment folder.
+Note: The `--prefix` makes it
+so that the `pyvenv`
+environment will be installed
+in the project directory
+instead of in the Conda's
+default location. If you have
+multiple drives, Conda will
+default to something like `C`
+drive. This helps with the
+control of where you want to
+install that virtual
+environment folder.
 
 Activate the created environment.
 
@@ -55,23 +85,29 @@ Activate the created environment.
 conda activate D:\git\<project_name>\pyvenv
 ```
 
-Now create an `R` environment for your project.
+Now create an `R` environment
+for your project.
 
 ```
 # this command creates an R environment
 conda create --prefix rvenv r-essentials r-base
 ```
 
-This environment needs to be activated as well.
+This environment needs to be
+activated as well.
 
 ```
 # this command activates R environment
 conda activate D:\git\<project_name>\rvenv
 ```
 
-After this, point your IDE to these environments and you
-should be good to go. In **PyCharm**, go to
-`File/Settings/Project` and setup both `Python` and `R`
-interpreters by pointing to existing Anaconda environments.
+After this, point your IDE to
+these environments and you
+should be good to go. In
+**PyCharm**, go to
+`File/Settings/Project` and
+setup both `Python` and `R`
+interpreters by pointing to
+existing Anaconda environments.
 
 That's all!
