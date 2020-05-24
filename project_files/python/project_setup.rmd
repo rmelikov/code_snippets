@@ -1,15 +1,15 @@
 ---
-title: Setting Up a New Project with Virtual Environments (in PyCharm)
+title: Setting Up a New Project with Virtual Environments
 subtitle: Python and R Project with Virtual Environments
-author:
-  name: Ramin Melikov
-  affiliation: Georgia Institute of Technology
-  email: melikov@gatech.edu
+# author:
+  # name: Ramin Melikov
+  # affiliation: Georgia Institute of Technology
+  # email: melikov@gatech.edu
   # affiliation: University of Illinois at Urbana-Champaign
   # email: melikov2@illinois.edu
   # affiliation: Ra Me
   # email: ramin.melikov@gmail.com
-date: '`r format(as.POSIXct(Sys.Date()), "%B %d, %Y")`'
+# date: '`r format(as.POSIXct(Sys.Date()), "%B %d, %Y")`'
 output:
   html_document:
     toc: false
@@ -19,14 +19,12 @@ editor_options:
   chunk_output_type: console
 ---
 
-### Setup
-
 Definitely will need **Anaconda**. I tried `pipenv` and `renv` and `vurtualenv`
 but I couldn't get them to work as well as **Anaconda** did. It seems to be the
-best for when you need to create virtual environments for each project. I also
+best for when you need to create virtual environments for each project. *(I also
 tried **Atom** and **VSCode**, and I happen to be a subscriber to **PyCharm**,
-and I think it is worth paying for **PyCharm**. (It is actually totally worth
-paying for the bundle, especially if you like **DataGrip**.)
+and I think it is worth paying for **PyCharm**. It is actually totally worth
+paying for the bundle, especially if you like **DataGrip**.)*
 
 All of the projects are located in the `D:\git` folder (for me). We'll refer to
 it as a home or projects folder.
