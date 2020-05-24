@@ -1,13 +1,13 @@
 ---
-title: Setting Up a New Project (in PyCharm)
+title: Setting Up a New Project with Virtual Environments (in PyCharm)
 subtitle: Python and R Project with Virtual Environments
 author:
   name: Ramin Melikov
-  affiliation: Georgia Tech, MGT 6203, Data Analytics in Business, Summer 2020
+  affiliation: Georgia Institute of Technology
   email: melikov@gatech.edu
   # affiliation: University of Illinois at Urbana-Champaign
   # email: melikov2@illinois.edu
-  # affiliation: Erisal
+  # affiliation: Ra Me
   # email: ramin.melikov@gmail.com
 date: '`r format(as.POSIXct(Sys.Date()), "%B %d, %Y")`'
 output:
@@ -25,42 +25,43 @@ Definitely will need **Anaconda**. I tried `pipenv` and `renv` and `vurtualenv`
 but I couldn't get them to work as well as **Anaconda** did. It seems to be the
 best for when you need to create virtual environments for each project. I also
 tried **Atom** and **VSCode**, and I happened to be a subscriber to **PyCharm**,
-and I think it is worth paying for **PyCharm**. It is actually worth paying for
-the bundle, especially if you like **DataGrip**.
+and I think it is worth paying for **PyCharm**. (It is actually totally worth
+paying for the bundle, especially if you like **DataGrip**.)
 
-All of the projects are located in the `D:\git` folder. We'll refer to it as a
-home or projects folder.
+All of the projects are located in the `D:\git` folder (for me). We'll refer to
+it as a home or projects folder.
 
-Create a project folder in the home directory **and from that directory**,
+Create a project folder in the home directory **and from that new directory**,
 execute the following command to create a `Python` environment. Make sure you
-are issuing these commands in the **Anaconda Prompt**.
+are issuing these commands into the **Anaconda Prompt** that came with **Anaconda**.
 
 ```
-# creates a python environment
+# this command creates a python environment
 conda create --prefix pyvenv python=3.7
 ```
-
 Note: The `--prefix` makes it so that the `pyvenv` environment will be
-installed in the project directory instead of in the Conda's default location.
+installed in the project directory instead of in the Conda's default location. If you
+have multiple drives, Conda will default to something like `C` drive. This helps
+with the control of where you want to install that virtual environment folder.
 
 Activate the created environment.
 
 ```
-# activates Python environment
+# this command activates Python environment
 conda activate D:\git\<project_name>\pyvenv
 ```
 
 Now create an `R` environment for your project.
 
 ```
-# creates an R environment
+# this command creates an R environment
 conda create --prefix rvenv r-essentials r-base
 ```
 
 This environment needs to be activated as well.
 
 ```
-# activates R environment
+# this command activates R environment
 conda activate D:\git\<project_name>\rvenv
 ```
 
