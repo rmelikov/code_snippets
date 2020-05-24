@@ -1,55 +1,65 @@
 ---
-title: "R Markdown Document Template"
-subtitle: "Georgia Tech, MGT 6203, Data Analytics in Business, Summer 2020"
-author: "Ramin Melikov, melikov@gatech.edu"
-date: '`r format(as.POSIXct(Sys.Date()), "%B %d, %Y", tz = "America/Chicago")`'
+title: R and Python in R Markdown
+subtitle: Variables get passed from code chunk to code chunk
+# author:
+  # name: Ramin Melikov
+  # affiliation: Georgia Institute of Technology
+  # email: melikov@gatech.edu
+  # affiliation: University of Illinois at Urbana-Champaign
+  # email: melikov2@illinois.edu
+  # affiliation: Ra Me
+  # email: ramin.melikov@gmail.com
+# date: '`r format(as.POSIXct(Sys.Date()), "%B %d, %Y")`'
 output:
   html_document:
-    toc: true
+    toc: false
     theme: journal
     highlight: tango
 editor_options:
   chunk_output_type: console
 ---
 
-
-# R and Python in R Markdown
-
-## Variables get passed from code chunk to code chunk
-
 ### Setup
 
-**We'll need the `reticulate` package. Enable the code chunk to install the package. (Set `eval = TRUE`.)**
+We'll need the `reticulate` package. Enable the code chunk 
+to install the package. (Set `eval = TRUE`.)
+
 ```{r eval = FALSE}
 install.packages("reticulate")
 ```
 
-**Let's now use the `reticulate` package.**
+Let's now use the `reticulate` package.
+
 ```{r}
 library(reticulate)
 ```
 
 ### Start in R
 
-**First, we're using R to create a secret.**
+First, we're using R to create a secret.
+
 ```{r}
 secret <- "RPythonMarkdown"
 ```
 
 ### Go to Python
 
-**Next, we're passing the secret from R to Python. (Variable `secret` from `r`.)**
+Next, we're passing the secret from R to Python. (Variable 
+`secret` from `r`.)
+
 ```{python}
 secret = r.secret
 ```
 
 ### Back in R
 
-**And finally, we're checking in R if `py$secret == secret`. (Variable `secret` from `python`.)**
+And finally, we're checking in R if `py$secret == secret`. 
+(Variable `secret` from `python`.)
+
 ```{r}
 if (py$secret == secret) {
   "Hello, World!"
 }
 ```
 
-**All done!**
+All done!
