@@ -24,7 +24,7 @@ editor_options:
 Definitely will need **Anaconda**. I tried `pipenv` and `renv` and `vurtualenv`
 but I couldn't get them to work as well as **Anaconda** did. It seems to be the
 best for when you need to create virtual environments for each project. I also
-tried **Atom** and **VSCode**, and I happened to be a subscriber to **PyCharm**,
+tried **Atom** and **VSCode**, and I happen to be a subscriber to **PyCharm**,
 and I think it is worth paying for **PyCharm**. (It is actually totally worth
 paying for the bundle, especially if you like **DataGrip**.)
 
