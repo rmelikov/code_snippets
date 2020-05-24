@@ -3,12 +3,12 @@ title: R and Python in R Markdown
 subtitle: Variables get passed from code chunk to code chunk
 # author:
   # name: Ramin Melikov
+  # affiliation: https://www.linkedin.com/in/melikov/
+  # email: ramin.melikov@gmail.com
   # affiliation: Georgia Institute of Technology
   # email: melikov@gatech.edu
   # affiliation: University of Illinois at Urbana-Champaign
   # email: melikov2@illinois.edu
-  # affiliation: Ra Me
-  # email: ramin.melikov@gmail.com
 # date: '`r format(as.POSIXct(Sys.Date()), "%B %d, %Y")`'
 output:
   html_document:
@@ -21,7 +21,7 @@ editor_options:
 
 ### Setup
 
-We'll need the `reticulate` package. Enable the code chunk 
+We'll need the `reticulate` package. Enable the code chunk
 to install the package. (Set `eval = TRUE`.)
 
 ```{r eval = FALSE}
@@ -44,7 +44,7 @@ secret <- "RPythonMarkdown"
 
 ### Go to Python
 
-Next, we're passing the secret from R to Python. (Variable 
+Next, we're passing the secret from R to Python. (Variable
 `secret` from `r`.)
 
 ```{python}
@@ -53,7 +53,7 @@ secret = r.secret
 
 ### Back in R
 
-And finally, we're checking in R if `py$secret == secret`. 
+And finally, we're checking in R if `py$secret == secret`.
 (Variable `secret` from `python`.)
 
 ```{r}
